@@ -2,10 +2,13 @@
 
 
 const links = document.querySelectorAll('.titles a');
+const articles = document.querySelectorAll('.articles');
 
 function titleClickHandler(e){
+    e.preventDefault();
     console.log('Link was clicked!');
     console.log(e);
+
     const activeLinks = document.querySelectorAll('.titles a.active');
     const activeArticles = document.querySelectorAll('article.post.active');
 
@@ -23,12 +26,14 @@ function titleClickHandler(e){
     }
 
     /* get 'href' attribute from the clicked link */
+    const articleHref = this.getAttribute('href');
 
     /* find the correct article using the selector (value of 'href' attribute) */
+    const currentArticle = document.querySelector(articleHref);
 
     /* add class 'active' to the correct article */
+    currentArticle.classList.add('active');
 }
-
 
 
 for(let link of links){
