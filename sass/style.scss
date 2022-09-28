@@ -17,7 +17,7 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
+  background: $color-dark;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -73,6 +73,7 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  color: $color-light;
 }
 
 /* Lists */
