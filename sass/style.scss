@@ -67,7 +67,7 @@ h3:after, h2:after {
   background: $background-gradient;
   background: -webkit-linear-gradient(bottom, #ffa387 0%, #fe4f70 51%, #ffa387 100%);
   background-size: auto 200%;
-  border-radius: 50%;
+  border-radius: 20px;
   transition: all .2s ease-in-out;
 }
 
@@ -78,6 +78,15 @@ h3:after, h2:after {
   font-weight: 400;
   text-align: center;
   cursor: pointer;
+  white-space: nowrap;
+
+  &:hover {
+    background: $background-gradient;
+    background: -webkit-linear-gradient(bottom, #ffa387 0%, #fe4f70 51%, #ffa387 100%);
+    background-size: auto 200%;
+    color: white;
+    border: none;
+  }
 }
 
 .card {
@@ -92,10 +101,19 @@ h3:after, h2:after {
   line-height: 1;
   text-align: center;
   color: $font-color-dark;
+  cursor: pointer;
 
   span {
     color: $color-main;
     font-size: 50px;
+  }
+}
+
+.post {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }
 
@@ -140,7 +158,7 @@ h3:after, h2:after {
 
   .social-icon {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 10px;
     color: $font-color-dark;
     cursor: pointer;
   }
@@ -161,7 +179,7 @@ h3:after, h2:after {
   }
 }
 
-.dott {
+.dot {
   background-color: $color-main;
   width: 4px;
   height: 4px;
@@ -180,7 +198,7 @@ h3:after, h2:after {
   color: white;
   z-index: -1;
   overflow: hidden;
-  box-shadow: rgba(32, 54, 86, 0.3) 0px 8px 20px 0px;
+  box-shadow: rgba(32, 54, 86, 0.3) 0 8px 20px 0;
 
   &:after {
     content: '';
@@ -239,17 +257,12 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    .nav-wrapper {
-      width: 65%;
-      justify-content: space-between;
-
-
       ul {
         list-style-type: none;
 
         li {
           display: inline-block;
-          margin-right: 10px;
+          margin-right: 20px;
           font-weight: 400;
           cursor: pointer;
 
@@ -258,22 +271,17 @@ nav {
           }
         }
       }
-    }
-  }
-
-  .social-wrapper {
-    width: 30%;
 
 
     .search, .burger-icon {
       height: 40px;
       width: 40px;
-      display: inline-flex;
+      display: flex;
       justify-content: center;
       align-items: center;
-      -webkit-box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
-      -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .15);
-      box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
+      -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+      -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+      box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
       -webkit-transition: all .2s ease-in-out;
       -moz-transition: all .2s ease-in-out;
 
@@ -282,6 +290,7 @@ nav {
     .burger-icon {
       margin-left: 10px;
       position: relative;
+      display: none;
 
       &:after {
         content: '';
@@ -298,6 +307,38 @@ nav {
   }
 }
 
+
+
+.titles {
+  color: $font-color-dark;
+  text-align: left;
+  padding: 0;
+
+  li {
+    padding: 15px 0;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #dbdbdb, rgba(0, 0, 0, 0)) 100% 1;
+    border-top: 0;
+
+    &:hover a {
+      color: $color-main;
+    }
+
+    .active {
+      color: $color-main;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+
+    i {
+      color: $color-main;
+      margin-right: 30px;
+    }
+  }
+}
 
 /* Header */
 header {
@@ -324,7 +365,7 @@ header {
 
       .btn {
         width: 48%;
-        border: 1px solid #dbdbdb;
+        border: 1px solid #ededed;
 
         &.active {
           background: $background-gradient;
@@ -342,6 +383,11 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 15px 0;
+        cursor: pointer;
+
+        &:hover h4 {
+          color: $color-main;
+        }
 
         .post-image {
           background-size: cover;
@@ -395,6 +441,10 @@ header {
 
   main {
     width: 68%;
+
+    .titles-card {
+      display: none;
+    }
 
     /* Authors */
 
@@ -468,9 +518,9 @@ header {
             top: -10px;
             position: absolute;
             width: 24px;
-            webkit-box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
-            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .15);
-            box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
+            -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+            -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
             background: #fe4f70;
             background: -webkit-linear-gradient(bottom, #fe4f70 0%, #ffa387 100%);
             background: linear-gradient(to top, #fe4f70 0%, #ffa387 100%);
@@ -512,7 +562,7 @@ header {
       }
     }
 
- /* Insipiration */
+    /* Inspiration */
 
     .inspiration {
       margin-top: 50px;
@@ -544,8 +594,9 @@ header {
             bottom: 0;
             left: 0;
             padding: 15px;
+
             p {
-               margin: 0;
+              margin: 0;
             }
 
             h3 {
@@ -602,29 +653,6 @@ header {
 
     .card {
       margin-bottom: 50px;
-
-      .titles {
-        color: $font-color-dark;
-        text-align: left;
-        padding: 0;
-
-        li {
-          padding: 15px 0;
-          border-width: 1px;
-          border-style: solid;
-          border-image: linear-gradient(to right, #dbdbdb, rgba(0, 0, 0, 0)) 100% 1;
-          border-top: 0;
-
-          &:last-of-type {
-            border: none;
-          }
-
-          i {
-            color: $color-main;
-            margin-right: 30px;
-          }
-        }
-      }
     }
 
     .tag-clouds .section-title {
@@ -646,6 +674,7 @@ header {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      border: none;
     }
 
     ul {
@@ -700,49 +729,111 @@ footer {
     }
 
     a.btn {
-      border: 1px solid #dbdbdb;
       font-size: 14px;
+      border: 1px solid #ededed;
 
       i {
         margin-right: 10px;
+      }
+
+      p {
+        display: contents;
       }
     }
   }
 }
 
-.post {
-  display: none;
-
-  &.active {
-    display: block;
-
-  }
-}
 
 /* @media Queries */
 
 @media (max-width: 1170px) {
   nav {
-    .social-list {
+
+    .social-wrapper {
       display: none
     }
 
     .wrapper {
-      justify-content: end;
+      justify-content: space-between;
     }
+
   }
 }
 
 @media (max-width: 1000px) {
   header {
-  .card-inspiration {
-    width: 100%;
-  }
 
-    .promo-posts {
-      display: none;
+    .wrapper {
+      flex-wrap: wrap;
+
+      .card-inspiration, .promo-posts {
+        width: 100%;
+      }
+
+      .promo-posts {
+        margin-top: 50px;
+        height: auto;
+        padding-top: 30px;
+
+        .post-wrapper {
+          margin-top: 50px;
+        }
+      }
     }
   }
 }
 
+@media (max-width: 900px) {
+  aside {
+    display: none;
+  }
+  .wrapper main {
+    width: 100%;
 
+    .titles-card {
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  nav .wrapper .burger-icon {
+    display: block;
+  }
+
+  nav .nav-list, nav .search.pills {
+    display: none;
+  }
+
+  .instagram-images .container ul li {
+    width: 33%;
+
+    &:nth-child(odd) {
+      display: none;
+    }
+  }
+
+  footer {
+    .wrapper {
+      flex-direction: column-reverse;
+
+      a.btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          margin: 0;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}

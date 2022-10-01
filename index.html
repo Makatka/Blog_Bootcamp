@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
+<nav id="up">
     <div class="container">
         <div class="wrapper">
-            <div class="wrapper nav-wrapper" id="up">
                 <div class="logo">CoolBlog<span> .</span></div>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#">Home</a></li>
@@ -19,21 +18,18 @@
                     <li class="nav-item"><a href="#">Features</a></li>
                     <li class="nav-item"><a href="#">Contact</a></li>
                 </ul>
-            </div>
             <div class="wrapper social-wrapper">
                 <ul class="social-list">
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li class="social-icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
-                <div class="wrapper">
+            </div>
                     <div class="search pills"><i class="fa-solid fa-magnifying-glass"></i></div>
                     <div class="burger-icon pills"></div>
-                </div>
-            </div>
         </div>
     </div>
 </nav>
@@ -136,33 +132,51 @@
                     </ul>
                 </div>
             </section>
-
+            <section class="card titles-card">
+                <h2 class="section-title">Explore Topics</h2>
+                <ul class="list titles">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-2"><span>Article 2</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-3"><span>Article 3</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-4"><span>Article 4</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-5"><span>Article 5</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-6"><span>Article 6</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-7"><span>Article 7</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-8"><span>Article 8</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-9"><span>Article 9</span></a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#article-10"><span>Article 10</span></a></li>
+                </ul>
+            </section>
 
             <section class="posts card">
                 <article class="post active" id="article-1">
                     <div>
-                    <div class="post-author">
-                        <span class="author-image"></span>
-                        <p>Marion Berry</p>
-                        <span class="dott"></span>
-                        <p>August 2, 2022</p>
-                    </div>
-                    <h3 class="post-title">Article 1</h3>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 1</h3>
 
 
-                    <div class="post-content">
-                        <p>Duis non dolor efficitur erat interdum fringilla a lobortis dolor. Aenean in massa viverra,
-                            pretium augue et, imperdiet diam. Proin varius vitae lectus ut suscipit. Etiam metus lacus,
-                            molestie at ante eget, gravida tristique metus. Morbi finibus elit mi, ut aliquam libero
-                            tempor eu.</p>
+                        <div class="post-content">
+                            <p>Duis non dolor efficitur erat interdum fringilla a lobortis dolor. Aenean in massa
+                                viverra,
+                                pretium augue et, imperdiet diam. Proin varius vitae lectus ut suscipit. Etiam metus
+                                lacus,
+                                molestie at ante eget, gravida tristique metus. Morbi finibus elit mi, ut aliquam libero
+                                tempor eu.</p>
 
-                        <p>Curabitur a arcu ut nunc ornare tempor. Vestibulum et augue purus. Sed mattis auctor iaculis.
-                            Duis placerat tempus nisl, et commodo sem varius sed. Ut ac ultrices leo. Aliquam efficitur
-                            augue a scelerisque lacinia. Donec sit amet justo lacus.</p>
+                            <p>Curabitur a arcu ut nunc ornare tempor. Vestibulum et augue purus. Sed mattis auctor
+                                iaculis.
+                                Duis placerat tempus nisl, et commodo sem varius sed. Ut ac ultrices leo. Aliquam
+                                efficitur
+                                augue a scelerisque lacinia. Donec sit amet justo lacus.</p>
 
-                        <p>Duis tincidunt tellus non lorem molestie lobortis. Ut nec mauris consectetur, convallis nisl
-                            vel, venenatis magna. Sed efficitur egestas purus, eu fermentum leo sodales in.</p>
-                    </div>
+                            <p>Duis tincidunt tellus non lorem molestie lobortis. Ut nec mauris consectetur, convallis
+                                nisl
+                                vel, venenatis magna. Sed efficitur egestas purus, eu fermentum leo sodales in.</p>
+                        </div>
                     </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
@@ -173,28 +187,31 @@
                     </div>
                 </article>
                 <article class="post" id="article-2">
-                   <div>
-                       <div class="post-author">
-                           <span class="author-image"></span>
-                           <p>Marion Berry</p>
-                           <span class="dott"></span>
-                           <p>August 2, 2022</p>
-                       </div>
-                       <h3 class="post-title">Article 2</h3>
-                       <div class="post-content">
-                           <p>Phasellus sollicitudin, arcu vel iaculis ullamcorper, quam leo viverra orci, et faucibus quam
-                               sapien vel est. Maecenas ac suscipit elit. Nullam interdum, lorem vitae venenatis pulvinar,
-                               ex dui malesuada nunc, tempus cursus enim metus vel nulla.</p>
+                    <div>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 2</h3>
+                        <div class="post-content">
+                            <p>Phasellus sollicitudin, arcu vel iaculis ullamcorper, quam leo viverra orci, et faucibus
+                                quam
+                                sapien vel est. Maecenas ac suscipit elit. Nullam interdum, lorem vitae venenatis
+                                pulvinar,
+                                ex dui malesuada nunc, tempus cursus enim metus vel nulla.</p>
 
-                           <p>Integer hendrerit, eros id efficitur dapibus, ante arcu ullamcorper orci, a iaculis felis
-                               turpis at purus. Quisque sodales posuere sapien vel consectetur. Duis dui urna, commodo non
-                               ante nec, mattis dictum enim. Donec aliquam erat sed diam lobortis, vel gravida lacus
-                               laoreet. Phasellus pretium maximus mi, eu posuere justo suscipit vel.</p>
+                            <p>Integer hendrerit, eros id efficitur dapibus, ante arcu ullamcorper orci, a iaculis felis
+                                turpis at purus. Quisque sodales posuere sapien vel consectetur. Duis dui urna, commodo
+                                non
+                                ante nec, mattis dictum enim. Donec aliquam erat sed diam lobortis, vel gravida lacus
+                                laoreet. Phasellus pretium maximus mi, eu posuere justo suscipit vel.</p>
 
-                           <p>Nam magna nisl, varius in malesuada vitae, facilisis vel metus. Proin rhoncus euismod leo
-                               dictum lobortis. Suspendisse non ante sapien.</p>
-                       </div>
-                   </div>
+                            <p>Nam magna nisl, varius in malesuada vitae, facilisis vel metus. Proin rhoncus euismod leo
+                                dictum lobortis. Suspendisse non ante sapien.</p>
+                        </div>
+                    </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
@@ -208,18 +225,20 @@
                         <div class="post-author">
                             <span class="author-image"></span>
                             <p>Marion Berry</p>
-                            <span class="dott"></span>
+                            <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
                         <h3 class="post-title">Article 3</h3>
                         <div class="post-content">
                             <p>Mauris vel pellentesque turpis, ac sodales nisl. Quisque iaculis mi velit, ut convallis
-                                tellus accumsan a. Quisque iaculis, nisi et dignissim tincidunt, nisl eros euismod nulla,
+                                tellus accumsan a. Quisque iaculis, nisi et dignissim tincidunt, nisl eros euismod
+                                nulla,
                                 finibus laoreet erat enim posuere elit.</p>
 
                             <p>Aenean at semper urna. Duis vel sapien molestie, egestas diam consequat, molestie nulla.
                                 Praesent a malesuada metus. Praesent et tempus leo.</p>
-                            <p>Mauris in eleifend neque, vitae eleifend velit. Maecenas purus est, bibendum eget imperdiet
+                            <p>Mauris in eleifend neque, vitae eleifend velit. Maecenas purus est, bibendum eget
+                                imperdiet
                                 id, dictum sed ante. Aenean a magna et eros sagittis aliquet.</p>
                         </div>
                     </div>
@@ -237,7 +256,7 @@
                         <div class="post-author">
                             <span class="author-image"></span>
                             <p>Marion Berry</p>
-                            <span class="dott"></span>
+                            <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
                         <h3 class="post-title">Article 4</h3>
@@ -270,19 +289,21 @@
                         <div class="post-author">
                             <span class="author-image"></span>
                             <p>Marion Berry</p>
-                            <span class="dott"></span>
+                            <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
                         <h3 class="post-title">Article 5</h3>
                         <div class="post-content">
-                            <p>Suspendisse sem eros, euismod condimentum arcu ac, consequat fermentum orci. Nam convallis
+                            <p>Suspendisse sem eros, euismod condimentum arcu ac, consequat fermentum orci. Nam
+                                convallis
                                 lacus nec interdum vestibulum. Vestibulum luctus, quam eu tristique ornare, lorem nibh
                                 sodales enim, vitae tempor dolor ante vitae tortor.</p>
 
                             <p>Duis venenatis metus quis luctus lobortis. In porttitor ipsum eget ligula aliquam ornare.
                                 Cras malesuada urna id volutpat sodales.</p>
 
-                            <p>Donec lobortis ultricies turpis, eu viverra magna gravida quis. Fusce sit amet pretium nulla.
+                            <p>Donec lobortis ultricies turpis, eu viverra magna gravida quis. Fusce sit amet pretium
+                                nulla.
                                 Duis rutrum metus vel libero sodales, pellentesque varius ex pulvinar.</p>
                         </div>
                     </div>
@@ -295,28 +316,31 @@
                     </div>
                 </article>
                 <article class="post" id="article-6">
-                   <div>
-                       <div class="post-author">
-                           <span class="author-image"></span>
-                           <p>Marion Berry</p>
-                           <span class="dott"></span>
-                           <p>August 2, 2022</p>
-                       </div>
-                       <h3 class="post-title">Article 6</h3>
-                       <div class="post-content">
-                           <p>Donec posuere iaculis ante sed hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                               elit. Quisque hendrerit neque nec urna tincidunt, quis vehicula dui vulputate. Morbi est
-                               sapien, auctor ut lectus eu, placerat viverra lorem.</p>
+                    <div>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 6</h3>
+                        <div class="post-content">
+                            <p>Donec posuere iaculis ante sed hendrerit. Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit. Quisque hendrerit neque nec urna tincidunt, quis vehicula dui vulputate. Morbi est
+                                sapien, auctor ut lectus eu, placerat viverra lorem.</p>
 
-                           <p>Cras consectetur at erat id accumsan. Suspendisse lacinia in nulla quis vulputate. Nunc vitae
-                               consectetur augue. Nam ut vehicula mi. Aliquam tristique, purus in hendrerit porta, elit
-                               lectus finibus mi, vel malesuada nisl lectus a libero.</p>
+                            <p>Cras consectetur at erat id accumsan. Suspendisse lacinia in nulla quis vulputate. Nunc
+                                vitae
+                                consectetur augue. Nam ut vehicula mi. Aliquam tristique, purus in hendrerit porta, elit
+                                lectus finibus mi, vel malesuada nisl lectus a libero.</p>
 
-                           <p>Nam quis efficitur ante. Sed eget purus quis ex commodo porta eu sit amet dolor. Mauris
-                               tellus nisl, dictum nec est vitae, condimentum ornare ante. Fusce ornare hendrerit maximus.
-                               In maximus rhoncus justo.</p>
-                       </div>
-                   </div>
+                            <p>Nam quis efficitur ante. Sed eget purus quis ex commodo porta eu sit amet dolor. Mauris
+                                tellus nisl, dictum nec est vitae, condimentum ornare ante. Fusce ornare hendrerit
+                                maximus.
+                                In maximus rhoncus justo.</p>
+                        </div>
+                    </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
@@ -326,27 +350,29 @@
                     </div>
                 </article>
                 <article class="post" id="article-7">
-                   <div>
-                       <div class="post-author">
-                           <span class="author-image"></span>
-                           <p>Marion Berry</p>
-                           <span class="dott"></span>
-                           <p>August 2, 2022</p>
-                       </div>
-                       <h3 class="post-title">Article 7</h3>
-                       <div class="post-content">
-                           <p>Donec eleifend mauris ac nisl fermentum, ac fermentum turpis dignissim. Aliquam diam nisl,
-                               imperdiet a varius eget, lobortis sed nisi. Nullam suscipit ipsum sed magna blandit, sed
-                               pellentesque urna malesuada.</p>
+                    <div>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 7</h3>
+                        <div class="post-content">
+                            <p>Donec eleifend mauris ac nisl fermentum, ac fermentum turpis dignissim. Aliquam diam
+                                nisl,
+                                imperdiet a varius eget, lobortis sed nisi. Nullam suscipit ipsum sed magna blandit, sed
+                                pellentesque urna malesuada.</p>
 
-                           <p>Duis vestibulum arcu et lectus viverra porta. Praesent tempor lacus eget quam mattis, sit
-                               amet venenatis diam ultrices. Morbi gravida sapien quis ligula tincidunt, vel sagittis erat
-                               ultrices.</p>
+                            <p>Duis vestibulum arcu et lectus viverra porta. Praesent tempor lacus eget quam mattis, sit
+                                amet venenatis diam ultrices. Morbi gravida sapien quis ligula tincidunt, vel sagittis
+                                erat
+                                ultrices.</p>
 
-                           <p>Ut orci tellus, laoreet ac diam ut, tempus bibendum nisi. Nam egestas sagittis nibh.
-                               Curabitur tristique dui quis egestas pretium. Duis eu felis orci.</p>
-                       </div>
-                   </div>
+                            <p>Ut orci tellus, laoreet ac diam ut, tempus bibendum nisi. Nam egestas sagittis nibh.
+                                Curabitur tristique dui quis egestas pretium. Duis eu felis orci.</p>
+                        </div>
+                    </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
@@ -360,7 +386,7 @@
                         <div class="post-author">
                             <span class="author-image"></span>
                             <p>Marion Berry</p>
-                            <span class="dott"></span>
+                            <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
                         <h3 class="post-title">Article 8</h3>
@@ -368,12 +394,15 @@
                             <p>Praesent quis imperdiet erat. Curabitur tempor sapien a interdum malesuada. Proin libero
                                 erat, sagittis a sollicitudin eget, pulvinar nec risus. Cras et suscipit sem.</p>
 
-                            <p>Maecenas consequat diam nec sollicitudin congue. Aenean porttitor porttitor quam, condimentum
+                            <p>Maecenas consequat diam nec sollicitudin congue. Aenean porttitor porttitor quam,
+                                condimentum
                                 interdum metus congue sed. Donec at nulla ipsum.</p>
 
-                            <p>Mauris non congue dui. Aenean ac eros vitae massa vulputate aliquet ut ac elit. Morbi iaculis
+                            <p>Mauris non congue dui. Aenean ac eros vitae massa vulputate aliquet ut ac elit. Morbi
+                                iaculis
                                 auctor nunc aliquet luctus. Nunc tincidunt sem dui, quis interdum leo pellentesque eget.
-                                Fusce id leo varius, imperdiet nunc vitae, tristique mi. Mauris quis interdum justo. Mauris
+                                Fusce id leo varius, imperdiet nunc vitae, tristique mi. Mauris quis interdum justo.
+                                Mauris
                                 auctor purus eu leo faucibus feugiat. Nulla at odio vitae leo semper blandit.</p>
                         </div>
                     </div>
@@ -387,27 +416,30 @@
                     </div>
                 </article>
                 <article class="post" id="article-9">
-                   <div>
-                       <div class="post-author">
-                           <span class="author-image"></span>
-                           <p>Marion Berry</p>
-                           <span class="dott"></span>
-                           <p>August 2, 2022</p>
-                       </div>
-                       <h3 class="post-title">Article 9</h3>
-                       <div class="post-content">
-                           <p>Tam et facilisis purus. Donec vulputate est quis lobortis posuere. Nunc vitae lorem ut odio
-                               faucibus pulvinar nec in justo. Ut ut ante ac tellus ornare tempus. Nunc maximus, tortor et
-                               dictum convallis, nunc libero posuere leo, scelerisque ultrices arcu sapien ut tellus.</p>
+                    <div>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 9</h3>
+                        <div class="post-content">
+                            <p>Tam et facilisis purus. Donec vulputate est quis lobortis posuere. Nunc vitae lorem ut
+                                odio
+                                faucibus pulvinar nec in justo. Ut ut ante ac tellus ornare tempus. Nunc maximus, tortor
+                                et
+                                dictum convallis, nunc libero posuere leo, scelerisque ultrices arcu sapien ut
+                                tellus.</p>
 
-                           <p>Fusce lacinia augue massa, non tincidunt tortor auctor quis. Vestibulum ut pretium nisl.
-                               Etiam id tellus tempus, commodo ligula vehicula, porta magna.</p>
+                            <p>Fusce lacinia augue massa, non tincidunt tortor auctor quis. Vestibulum ut pretium nisl.
+                                Etiam id tellus tempus, commodo ligula vehicula, porta magna.</p>
 
-                           <p>Donec fringilla blandit dolor vel aliquet. Fusce tortor sapien, lobortis eu vehicula sit
-                               amet, dignissim et lectus. In ullamcorper metus vel massa fermentum, at fermentum dui
-                               sollicitudin. Nullam lacinia elit vel tortor ullamcorper pulvinar.</p>
-                       </div>
-                   </div>
+                            <p>Donec fringilla blandit dolor vel aliquet. Fusce tortor sapien, lobortis eu vehicula sit
+                                amet, dignissim et lectus. In ullamcorper metus vel massa fermentum, at fermentum dui
+                                sollicitudin. Nullam lacinia elit vel tortor ullamcorper pulvinar.</p>
+                        </div>
+                    </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list ">
@@ -417,33 +449,37 @@
                     </div>
                 </article>
                 <article class="post" id="article-10">
-                   <div>
-                       <div class="post-author">
-                           <span class="author-image"></span>
-                           <p>Marion Berry</p>
-                           <span class="dott"></span>
-                           <p>August 2, 2022</p>
-                       </div>
-                       <h3 class="post-title">Article 10</h3>
-                       <div class="post-content">
-                           <p>Aliquam erat volutpat. Ut non eleifend lectus. Donec suscipit tellus tempor, ornare dui id,
-                               hendrerit neque. Phasellus lacinia laoreet dui in luctus. Sed hendrerit, magna sit amet
-                               varius tempor, augue augue scelerisque est, non scelerisque mauris libero eu sapien.</p>
+                    <div>
+                        <div class="post-author">
+                            <span class="author-image"></span>
+                            <p>Marion Berry</p>
+                            <span class="dot"></span>
+                            <p>August 2, 2022</p>
+                        </div>
+                        <h3 class="post-title">Article 10</h3>
+                        <div class="post-content">
+                            <p>Aliquam erat volutpat. Ut non eleifend lectus. Donec suscipit tellus tempor, ornare dui
+                                id,
+                                hendrerit neque. Phasellus lacinia laoreet dui in luctus. Sed hendrerit, magna sit amet
+                                varius tempor, augue augue scelerisque est, non scelerisque mauris libero eu sapien.</p>
 
-                           <p>Sed at sapien in quam sollicitudin aliquam. In interdum metus a mi porttitor luctus. Sed
-                               commodo, arcu id lacinia posuere, felis elit pharetra urna, at feugiat est orci sit amet
-                               libero. Quisque in nisl est. Nullam vehicula at lectus non luctus. Cras aliquam neque magna,
-                               at varius nisi egestas ut.</p>
+                            <p>Sed at sapien in quam sollicitudin aliquam. In interdum metus a mi porttitor luctus. Sed
+                                commodo, arcu id lacinia posuere, felis elit pharetra urna, at feugiat est orci sit amet
+                                libero. Quisque in nisl est. Nullam vehicula at lectus non luctus. Cras aliquam neque
+                                magna,
+                                at varius nisi egestas ut.</p>
 
-                           <p>Rhoncus purus nulla, non auctor lacus placerat ut. Aliquam condimentum eget magna ac gravida.
-                               Etiam egestas faucibus urna et finibus. Cras vel tellus vel magna suscipit euismod. Maecenas
-                               id arcu ante. Duis iaculis scelerisque erat, at ullamcorper arcu consectetur eu. Fusce
-                               aliquam diam at arcu pharetra, vel fermentum nunc lobortis.</p>
-                       </div>
-                   </div>
+                            <p>Rhoncus purus nulla, non auctor lacus placerat ut. Aliquam condimentum eget magna ac
+                                gravida.
+                                Etiam egestas faucibus urna et finibus. Cras vel tellus vel magna suscipit euismod.
+                                Maecenas
+                                id arcu ante. Duis iaculis scelerisque erat, at ullamcorper arcu consectetur eu. Fusce
+                                aliquam diam at arcu pharetra, vel fermentum nunc lobortis.</p>
+                        </div>
+                    </div>
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
-                        <ul class="list">
+                        <ul class="tag-list">
                             <li><a href="#">#code</a></li>
                             <li><a href="#">#design</a></li>
                             <li><a href="#">#news</a></li>
@@ -529,7 +565,7 @@
 
         </main>
         <aside>
-            <section class="sidebar card">
+            <section class="card">
                 <h2 class="section-title">Explore Topics</h2>
                 <ul class="list titles">
                     <li><i class="fa-solid fa-angle-right"></i><a href="#article-2"><span>Article 2</span></a></li>
@@ -549,12 +585,12 @@
                     <p>Hello, We’re content writer who is fascinated by content fashion, celebrity and lifestyle. We
                         helps clients bring the right content to the right people.</p>
                     <ul class="social-list">
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                        <li class="social-icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i> </a></li>
                     </ul>
                 </div>
             </section>
@@ -569,13 +605,10 @@
                     <li>#inspiration</li>
                     <li>#hobby</li>
                     <li>#feelingGood</li>
-                                    </ul>
+                </ul>
             </section>
         </aside>
-
     </div>
-
-
 </div>
 
 <section class="instagram-images">
@@ -591,20 +624,19 @@
         <div class="btn pills">#CoolBlog on Instagram</div>
     </div>
 </section>
-
 <footer>
     <div class="container">
         <div class="wrapper">
-            <div class="copyright">	&copy; CoolBlog. by Makatka</div>
+            <div class="copyright"> &copy; CoolBlog. by Makatka</div>
             <ul class="social-list">
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li class="social-icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
-            <a class="btn" href="#up"><i class="fa-solid fa-chevron-up"></i> Back to top</a>
+            <a class="btn" href="#up"><i class="fa-solid fa-chevron-up"></i><p>Back to top</p></a>
         </div>
     </div>
 </footer>
