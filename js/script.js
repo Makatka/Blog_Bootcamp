@@ -1,11 +1,4 @@
 'use strict';
-
-
-
-const articles = document.querySelectorAll('.post');
-const titleList =  document.querySelector('ul.list.titles');
-
-
 function titleClickHandler(e){
     e.preventDefault();
     console.log('Link was clicked!');
@@ -41,9 +34,10 @@ function titleClickHandler(e){
 
 
 function generateTitlelinks (){
-    console.log('wykonanie funckcji generującej linki')
+    const articles = document.querySelectorAll('.post');
+    const titleList =  document.querySelector('ul.list.titles');
+    console.log('wykonanie funkcji generującej linki')
 
-    /* remove contents of titleList */
     let html = '';
 
     /* for each article */
@@ -51,16 +45,19 @@ function generateTitlelinks (){
     for(let article of articles){
 
         /* get the article id */
-        let articleId = article.getAttribute('id');
+        const articleId = article.getAttribute('id');
 
         /* find the title element and get the title */
-        let articleTitle = article.querySelector('.post-title').textContent;
+        const articleTitle = article.querySelector('.post-title').textContent;
 
         /*  create HTML of the link */
-        let linkHtml = `<li><a href="#${articleId}"><span>${articleTitle}</span></a></li>`;
+        const linkHtml = `<li><i class="fa-solid fa-angle-right"></i><a href="#${articleId}"><span>${articleTitle}</span></a></li>`;
+
+
+
 
         /* insert link into titleList */
-        html = html + linkHtml;
+        html += linkHtml;
     }
 
     titleList.innerHTML = html;
