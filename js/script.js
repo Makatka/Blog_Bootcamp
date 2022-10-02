@@ -32,12 +32,10 @@ function titleClickHandler(e){
     currentArticle.classList.add('active');
 }
 
-
-
 function generateTitlelinks (){
-    const titleList =  document.querySelector('ul.list.titles');
+    const titleListDesktop =  document.querySelector('aside ul.list.titles');
+    const titleListMobile =  document.querySelector('main ul.list.titles');
     const articles = document.querySelectorAll('.post');
-    console.log('wykonanie funckcji generującej linki')
 
     let html = '';
 
@@ -58,14 +56,19 @@ function generateTitlelinks (){
         html += linkHtml;
     }
 
-    titleList.innerHTML = html;
+        titleListDesktop.innerHTML = html;
+        titleListMobile.innerHTML = html;
 
-    const links = titleList.querySelectorAll('a');
+    const linksDesktop = titleListDesktop.querySelectorAll('a');
+    const linksMobile = titleListMobile.querySelectorAll('a');
 
-    for(let link of links ){
+    for(let link of linksDesktop ){
+        link.addEventListener('click', titleClickHandler);
+    }
+
+    for(let link of linksMobile ){
         link.addEventListener('click', titleClickHandler);
     }
 }
-
 
 generateTitlelinks();
