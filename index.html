@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoolBlog</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="css/style.css">
@@ -10,46 +11,48 @@
 <nav id="up">
     <div class="container">
         <div class="wrapper">
-                <div class="logo">CoolBlog<span> .</span></div>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">Lifestyle</a></li>
-                    <li class="nav-item"><a href="#">Culture</a></li>
-                    <li class="nav-item"><a href="#">Features</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                </ul>
+            <div class="logo">CoolBlog<span> .</span></div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Lifestyle</a></li>
+                <li class="nav-item"><a href="#">Culture</a></li>
+                <li class="nav-item"><a href="#">Features</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
             <div class="wrapper social-wrapper">
                 <ul class="social-list">
-                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
                     <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
                     <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
-                    <div class="search pills"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <div class="burger-icon pills"></div>
+            <div class="search pills"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="burger-icon pills"></div>
         </div>
     </div>
 </nav>
-
-
 <header>
     <div class="container">
         <div class="wrapper">
             <div class="card-inspiration">
-                <div class="card-inner">
-                    <div class="pills btn">Inspiration</div>
-                    <div class="card-text">
-                        <h1 class="card-header">5 Easy Ways You Can Turn Future Into Success</h1>
-                        <p>
-                            <span>Katen Doe</span>
-                            <span>August 20.2022</span>
-                        </p>
+                <div class="figure">
+                    <div class="card-inner">
+                        <div class="pills btn">Inspiration</div>
+                        <div class="card-text">
+                            <h1 class="card-header">5 Easy Ways You Can Turn Future Into Success</h1>
+                            <p>
+                                <span>Katen Doe</span>
+                                <span>August 20.2022</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-
             </div>
             <div class="promo-posts">
                 <div class="btn-wrapper">
@@ -90,8 +93,6 @@
         </div>
     </div>
 </header>
-
-
 <div class="container">
     <div class="wrapper">
         <main>
@@ -146,7 +147,6 @@
                     <li><i class="fa-solid fa-angle-right"></i><a href="#article-10"><span>Article 10</span></a></li>
                 </ul>
             </section>
-
             <section class="posts card">
                 <article class="post active" id="article-1">
                     <div>
@@ -494,69 +494,114 @@
                         <h2 class="section-title">Inspiration</h2>
                     </div>
                     <div class="nav-button">
-                        <span><i class="fa-solid fa-chevron-left"></i></span>
-                        <span><i class="fa-solid fa-chevron-right"></i></span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselInspiration"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-left"></i></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselInspiration"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                        </button>
                     </div>
                 </div>
-
-                <div class="wrapper">
-                    <div class="card-inspiration">
-                        <div class="card-inner">
-                            <div class="pills btn">Celebration</div>
-                            <div class="card-text">
-                                <h4 class="card-header">Want to Have A More Appealing tatoo?</h4>
-                                <p>
-                                    <span>Katen Doe</span>
-                                    <span>August 20.2022</span>
-                                </p>
+                <div id="carouselInspiration" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <div class="wrapper">
+                                <div class="card-inspiration">
+                                    <div class="figure">
+                                        <div class="card-inner">
+                                            <div class="pills btn">Politic</div>
+                                            <div class="card-text">
+                                                <h4 class="card-header">Your Light i About to Stop Being Relevant</h4>
+                                                <p>
+                                                    <span>Katen Doe</span>
+                                                    <span>August 20.2022</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-inspiration">
+                                    <div class="figure">
+                                        <div class="card-inner">
+                                            <div class="pills btn">Culture</div>
+                                            <div class="card-text">
+                                                <h4 class="card-header">Feel Like A Pro With The Help Of These 7 Tips</h4>
+                                                <p>
+                                                    <span>Katen Doe</span>
+                                                    <span>August 20.2022</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-inspiration">
-                        <div class="card-inner">
-                            <div class="pills btn">Culture</div>
-                            <div class="card-text">
-                                <h4 class="card-header">Feel Like A Pro With The Help Of These 7 Tips</h4>
-                                <p>
-                                    <span>Katen Doe</span>
-                                    <span>August 20.2022</span>
-                                </p>
+                        <div class="carousel-item">
+                            <div class="wrapper">
+                                <div class="card-inspiration">
+                                    <div class="figure">
+                                        <div class="card-inner">
+                                            <div class="pills btn">Inspiration</div>
+                                            <div class="card-text">
+                                                <h4 class="card-header">Pityful a rethoric question ran over her cheek</h4>
+                                                <p>
+                                                    <span>Katen Doe</span>
+                                                    <span>August 20.2022</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-inspiration">
+                                   <div class="figure">
+                                       <div class="card-inner">
+                                           <div class="pills btn">Celebration</div>
+                                           <div class="card-text">
+                                               <h4 class="card-header">Want To Have A More Appealing Tattoo?</h4>
+                                               <p>
+                                                   <span>Katen Doe</span>
+                                                   <span>August 20.2022</span>
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-inspiration">
-                        <div class="card-inner">
-                            <div class="pills btn">Politic</div>
-                            <div class="card-text">
-                                <h4 class="card-header">Your Light i About to Stop Being Relevant</h4>
-                                <p>
-                                    <span>Katen Doe</span>
-                                    <span>August 20.2022</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-inspiration">
-                        <div class="card-inner">
-                            <div class="pills btn">Celebration</div>
-                            <div class="card-text">
-                                <h4 class="card-header">What Can You Do About Fashion Right Now</h4>
-                                <p>
-                                    <span>Katen Doe</span>
-                                    <span>August 20.2022</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-inspiration">
-                        <div class="card-inner">
-                            <div class="pills btn">Culture</div>
-                            <div class="card-text">
-                                <h4 class="card-header">Feel Like A Pro With The Help Of These 7 Tips</h4>
-                                <p>
-                                    <span>Katen Doe</span>
-                                    <span>August 20.2022</span>
-                                </p>
+                        <div class="carousel-item">
+                            <div class="wrapper">
+                                <div class="card-inspiration">
+                                   <div class="figure">
+                                       <div class="card-inner">
+                                           <div class="pills btn">Business</div>
+                                           <div class="card-text">
+                                               <h4 class="card-header">Facts About Business That Will Help You Success</h4>
+                                               <p>
+                                                   <span>Katen Doe</span>
+                                                   <span>August 20.2022</span>
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="card-inspiration">
+                                   <div class="figure">
+                                       <div class="card-inner">
+                                           <div class="pills btn">Trending</div>
+                                           <div class="card-text">
+                                               <h4 class="card-header">60 Things To Immediately Do About Building</h4>
+                                               <p>
+                                                   <span>Katen Doe</span>
+                                                   <span>August 20.2022</span>
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -585,12 +630,18 @@
                     <p>Hello, We’re content writer who is fascinated by content fashion, celebrity and lifestyle. We
                         helps clients bring the right content to the right people.</p>
                     <ul class="social-list">
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i> </a></li>
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i> </a></li>
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i> </a></li>
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i> </a></li>
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i> </a></li>
-                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i> </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i>
+                        </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-twitter"></i> </a>
+                        </li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-instagram"></i>
+                        </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-pinterest"></i>
+                        </a></li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i> </a>
+                        </li>
+                        <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i> </a>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -636,10 +687,12 @@
                 <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></a></li>
                 <li class="social-icon"><a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
-            <a class="btn" href="#up"><i class="fa-solid fa-chevron-up"></i><p>Back to top</p></a>
+            <a class="btn" href="#up"><i class="fa-solid fa-chevron-up"></i>
+                <p>Back to top</p></a>
         </div>
     </div>
 </footer>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

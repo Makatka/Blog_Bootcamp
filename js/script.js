@@ -30,11 +30,11 @@ function titleClickHandler(e){
 
     /* [DONE] add class 'active' to the correct article */
     currentArticle.classList.add('active');
+    currentArticle.scrollIntoView({ behavior: 'smooth', block: 'end'});
 }
 
 function generateTitlelinks (){
-    const titleListDesktop =  document.querySelector('aside ul.list.titles');
-    const titleListMobile =  document.querySelector('main ul.list.titles');
+    const titles =  document.querySelectorAll(' ul.list.titles');
     const articles = document.querySelectorAll('.post');
 
     let html = '';
@@ -56,18 +56,13 @@ function generateTitlelinks (){
         html += linkHtml;
     }
 
-        titleListDesktop.innerHTML = html;
-        titleListMobile.innerHTML = html;
+    for(let title of titles) {
+        title.innerHTML = html;
+        const links = title.querySelectorAll('a');
 
-    const linksDesktop = titleListDesktop.querySelectorAll('a');
-    const linksMobile = titleListMobile.querySelectorAll('a');
-
-    for(let link of linksDesktop ){
-        link.addEventListener('click', titleClickHandler);
-    }
-
-    for(let link of linksMobile ){
-        link.addEventListener('click', titleClickHandler);
+         for(let link of links ){
+           link.addEventListener('click', titleClickHandler);
+        }
     }
 }
 

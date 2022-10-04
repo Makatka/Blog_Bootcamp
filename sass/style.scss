@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 /* Variables */
 
@@ -11,6 +12,7 @@ $font-color-light: #8f9bad;
 $font-color-dark: #203656;
 $color-main: #fe4f70;
 $background-gradient: linear-gradient(to right, #fe4f70 0%, #ffa387 51%, #fe4f70 100%);
+$transition: all .2s ease;
 
 /* Global */
 
@@ -36,15 +38,30 @@ body {
   display: flex;
 }
 
+a, h1, h2, h3, h4, p {
+  &::selection {
+    color: #fff;
+    background: $color-main;
+  }
+}
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: $transition;
+
+  &:hover {
+    color: $color-main;
+  }
 }
 
 ul {
   list-style-type: none;
   padding-inline-start: 0;
+}
+
+h2 {
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -68,7 +85,6 @@ h3:after, h2:after {
   background: -webkit-linear-gradient(bottom, #ffa387 0%, #fe4f70 51%, #ffa387 100%);
   background-size: auto 200%;
   border-radius: 20px;
-  transition: all .2s ease-in-out;
 }
 
 .btn {
@@ -79,6 +95,7 @@ h3:after, h2:after {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  transition: $transition;
 
   &:hover {
     background: $background-gradient;
@@ -134,6 +151,10 @@ h3:after, h2:after {
   }
 }
 
+section {
+  margin-top: 100px;
+}
+
 .section-title {
   color: $font-color-dark;
   position: relative;
@@ -158,7 +179,7 @@ h3:after, h2:after {
 
   .social-icon {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
     color: $font-color-dark;
     cursor: pointer;
   }
@@ -175,7 +196,6 @@ h3:after, h2:after {
     margin-right: 5px;
     font-size: 14px;
     margin-bottom: 5px;
-
   }
 }
 
@@ -189,59 +209,69 @@ h3:after, h2:after {
 
 
 .card-inspiration {
-  position: relative;
-  width: 68%;
-  background-size: cover;
-  background-position: center center;
-  height: 533px;
-  border-radius: 10px;
-  color: white;
-  z-index: -1;
-  overflow: hidden;
-  box-shadow: rgba(32, 54, 86, 0.3) 0 8px 20px 0;
+  cursor: pointer;
 
-  &:after {
-    content: '';
+  .figure {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(32, 54, 86, .6);
-  }
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    color: white;
+    z-index: -1;
+    overflow: hidden;
+    box-shadow: rgba(32, 54, 86, 0.3) 0 8px 20px 0;
+    cursor: pointer;
 
-  .card-inner {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    z-index: 5;
-
-    h1 {
-      font-size: 32px;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(32, 54, 86, .5);
     }
 
-    .btn {
-      font-size: 13px;
-    }
+    .card-inner {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      z-index: 5;
 
-    p {
-      font-size: 14px;
-      color: #B2B9C2;
-      letter-spacing: 1.5px;
+      h1 {
+        font-size: 32px;
+        margin: 30px 0 15px 0;
+      }
 
-      span {
-        margin-right: 20px;
-        position: relative;
+      h1, h4 {
+        text-shadow: 1px 3px 6px rgb(66 68 90);
+      }
 
-        &:first-child:after {
-          content: '';
-          width: 4px;
-          height: 4px;
-          border-radius: 50%;
-          border: 2px solid #B2B9C2;
-          position: absolute;
-          top: 45%;
-          right: -15px;
+      .btn {
+        font-size: 13px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #B2B9C2;
+        letter-spacing: 1.5px;
+
+        span {
+          margin-right: 20px;
+          position: relative;
+
+          &:first-child:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            border: 2px solid #B2B9C2;
+            position: absolute;
+            top: 45%;
+            right: -15px;
+          }
         }
       }
     }
@@ -257,21 +287,31 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-      ul {
-        list-style-type: none;
+    ul {
+      list-style-type: none;
+      margin-bottom: 0;
 
-        li {
-          display: inline-block;
-          margin-right: 20px;
-          font-weight: 400;
-          cursor: pointer;
+      li.nav-item {
+        display: inline-block;
+        margin-right: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 22px;
+        padding: 8px 15px;
+        transition: $transition;
 
-          &:hover {
-            color: $font-color-dark;
+        &:hover {
+          background: $background-gradient;
+          background: -webkit-linear-gradient(bottom, #ffa387 0%, #fe4f70 51%, #ffa387 100%);
+          background-size: auto 200%;
+          border: none;
+
+          a {
+            color: white;
           }
         }
       }
-
+    }
 
     .search, .burger-icon {
       height: 40px;
@@ -282,9 +322,6 @@ nav {
       -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
       -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
       box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-
     }
 
     .burger-icon {
@@ -308,7 +345,6 @@ nav {
 }
 
 
-
 .titles {
   color: $font-color-dark;
   text-align: left;
@@ -320,10 +356,6 @@ nav {
     border-style: solid;
     border-image: linear-gradient(to right, #dbdbdb, rgba(0, 0, 0, 0)) 100% 1;
     border-top: 0;
-
-    &:hover a {
-      color: $color-main;
-    }
 
     .active {
       color: $color-main;
@@ -345,9 +377,14 @@ header {
   margin: 50px 0;
 
   .card-inspiration {
-    background-image: url(../images/l1.jpeg);
-  }
+    height: 533px;
+    width: 68%;
 
+    .figure {
+      background-image: url(../images/l1.jpeg);
+      overflow: hidden;
+    }
+  }
 
   .promo-posts {
     width: 30%;
@@ -356,12 +393,14 @@ header {
     margin-left: auto;
     padding: 25px;
     height: 533px;
+    display: flex;
+    flex-direction: column;
 
     .btn-wrapper {
       margin: 0 auto 10px auto;
       display: flex;
       justify-content: space-between;
-
+      width: 100%;
 
       .btn {
         width: 48%;
@@ -378,6 +417,11 @@ header {
     }
 
     .post-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
       .item-post {
         position: relative;
         display: flex;
@@ -466,6 +510,10 @@ header {
           justify-content: space-between;
           align-items: center;
 
+          &:hover h4 {
+            color: $color-main;
+          }
+
           &:first-child span.author-image {
             background-image: url(../images/a1.jpeg);
 
@@ -548,84 +596,122 @@ header {
         .author-image {
           background-image: url(../images/a1.jpeg);
         }
+
+        p {
+          margin: 0;
+        }
       }
 
       .post-title {
         color: $font-color-dark;
+        margin: 30px 0;
       }
 
-      .post-tags {
-
-        strong {
-          color: $font-color-dark;
-        }
+      .post-tags strong {
+        color: $font-color-dark;
       }
     }
 
     /* Inspiration */
 
     .inspiration {
-      margin-top: 50px;
+      margin-top: 100px;
 
       & > .wrapper {
         align-items: center;
         justify-content: space-between;
 
-        .nav-button {
+        .nav-button .carousel-control-next, .nav-button .carousel-control-prev {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          border-radius: 50%;
+          border: 1px solid #ededed;
+          text-align: center;
+          line-height: 40px;
+          color: $font-color-dark;
 
-          span {
-            width: 40px;
-            height: 40px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid #ededed;
-            text-align: center;
-            line-height: 40px;
+          &:hover {
+            color: $color-main;
           }
         }
+      }
 
-        .card-inspiration {
-          width: 48%;
-          height: 315px;
-          box-shadow: none;
-          margin-top: 30px;
+      .carousel-inner {
 
-          .card-inner {
-            bottom: 0;
-            left: 0;
-            padding: 15px;
+        .carousel-item {
+          padding: 0 10px;
 
-            p {
-              margin: 0;
-            }
+          .card-inspiration {
+            width: 49%;
+            height: 315px;
+            margin-top: 30px;
 
-            h3 {
-              font-size: 22px;
-              font-family: $font-header;
+
+            .figure {
+              box-shadow: none;
+
+              .card-inner {
+                bottom: 0;
+                left: 0;
+                padding: 15px;
+
+                p {
+                  margin: 0;
+                  color: #dbdbdb;
+                }
+
+                h4 {
+                  font-size: 22px;
+                  font-family: $font-header;
+                  margin: 20px 0 15px 0;
+                  line-height: 33px;
+                }
+              }
             }
           }
 
           &:first-child {
-            background-image: url(../images/i1.jpeg);
+
+            .card-inspiration {
+
+              &:first-child .figure {
+                background-image: url(../images/i1.jpeg);
+              }
+
+              &:nth-child(2) .figure {
+                background-image: url(../images/i2.jpeg);
+              }
+            }
           }
 
           &:nth-child(2) {
-            background-image: url(../images/i2.jpeg);
+
+            .card-inspiration {
+
+              &:first-child .figure {
+                background-image: url(../images/i3.jpeg);
+              }
+
+              &:nth-child(2) .figure {
+                background-image: url(../images/i4.jpeg);
+              }
+            }
           }
 
           &:nth-child(3) {
-            background-image: url(../images/i3.jpeg);
-            display: none;
-          }
 
-          &:nth-child(4) {
-            background-image: url(../images/i4.jpeg);
-            display: none;
-          }
+            .card-inspiration {
 
-          &:nth-child(5) {
-            background-image: url(../images/a1.jpeg);
-            display: none;
+              &:first-child .figure {
+                background-image: url(../images/in5.jpeg);
+              }
+
+              &:nth-child(2) .figure {
+                background-image: url(../images/in6.jpeg);
+              }
+            }
           }
         }
       }
@@ -644,6 +730,10 @@ header {
 
     .about {
       background-image: url(../images/bg1.png);
+
+      .logo {
+        margin-bottom: 20px;
+      }
 
       p {
         font-size: 15px;
@@ -664,7 +754,7 @@ header {
 /* Instagram section */
 
 .instagram-images {
-  margin-top: 100px;
+  margin: 100px 0;
 
   .container {
     position: relative;
@@ -713,9 +803,9 @@ header {
 /* Footer */
 
 footer {
-  margin-top: 50px;
   padding: 20px 0;
   border-top: 1px solid #ededed;
+  color: $font-color-dark;
 
   .wrapper {
     align-items: center;
@@ -731,6 +821,7 @@ footer {
     a.btn {
       font-size: 14px;
       border: 1px solid #ededed;
+      color: $font-color-dark;
 
       i {
         margin-right: 10px;
@@ -756,7 +847,6 @@ footer {
     .wrapper {
       justify-content: space-between;
     }
-
   }
 }
 
@@ -797,7 +887,7 @@ footer {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   nav .wrapper .burger-icon {
     display: block;
   }
@@ -825,6 +915,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 15px;
 
         i {
           margin: 0;
@@ -836,4 +927,29 @@ footer {
       }
     }
   }
+}
+
+@media (max-width: 650px) {
+  .wrapper .author-list .authors ul li {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .post-author {
+    span.dot, p:last-child {
+      display: none;
+    }
+  }
+
+  .wrapper main .carousel-inner .carousel-item .card-inspiration {
+    width: 100% !important;
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
 }
