@@ -101,37 +101,45 @@
                     <h2 class="section-title">Authors</h2>
                     <ul>
                         <li>
-                            <span class="author-image"></span>
-                            <a href="#" class="post-text">
-                                <h4>Kitty Toebean</h4>
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <a href="#author-Kitty_Toebean" class="post-text">Kitty Toebean</a>
                                 <p>The European languages are members of the same family. </p>
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <span class="author-image"></span>
-                            <a href="#" class="post-text">
-                                <h4>Theo Tabby</h4>
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <a href="#author-Theo_Tabby" class="post-text">Theo Tabby</a>
                                 <p>The European languages are members of the same family. </p>
-
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <span class="author-image"></span>
-                            <a href="#" class="post-text">
-                                <h4>George Tuxedo</h4>
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <a href="#author-George_Tuxedo" class="post-text">George Tuxedo</a>
                                 <p>The European languages are members of the same family. </p>
-
-                            </a>
+                            </div>
                         </li>
                         <li>
-                            <span class="author-image"></span>
-                            <a href="#" class="post-text">
-                                <h4 class="author-name">Marion Berry</h4>
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <a href="#author-Marion_Berry" class="post-text">Marion Berry</a>
                                 <p>The European languages are members of the same family. </p>
-                            </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section class="tag-clouds card">
+                <h3 class="section-title">Tag Clouds</h3>
+                <ul class="tag-list">
+                    <li><a class="active" href="#tag-design">#design</a><span data-tag="design"></span></li>
+                    <li><a class="active" href="#tag-tutorials">#tutorials</a><span data-tag="tutorials"></span></li>
+                    <li><a href="#tag-code">#code</a><span data-tag="code"></span></li>
+                    <li><a href="#tag-news">#news</a><span data-tag="news"></span></li>
+                    <li><a href="#tag-reviews">#reviews</a><span data-tag="reviews"></span></li>
+                </ul>
             </section>
             <section class="card titles-card">
                 <h2 class="section-title">Explore Topics</h2>
@@ -148,11 +156,11 @@
                 </ul>
             </section>
             <section class="posts card">
-                <article class="post active" id="article-1">
+                <article class="post active" id="article-1" data-tags="design tutorials" data-author="Marion_Berry">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -181,16 +189,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#design</a></li>
-                            <li><a href="#">#tutorials</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-2">
+                <article class="post" id="article-2" data-tags="news code" data-author="Theo_Tabby">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -215,16 +221,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#news</a></li>
-                            <li><a href="#">#code</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-3">
+                <article class="post" id="article-3" data-tags="news reviews design" data-author="Theo_Tabby">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -245,17 +249,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#news</a></li>
-                            <li><a href="#">#reviews</a></li>
-                            <li><a href="#">#design</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-4">
+                <article class="post" id="article-4" data-tags="tutorials code design" data-author="Theo_Tabby">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -278,17 +279,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#tutorials</a></li>
-                            <li><a href="#">#code</a></li>
-                            <li><a href="#">#design</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-5">
+                <article class="post" id="article-5" data-tags="design reviews" data-author="George_Tuxedo">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -310,16 +308,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#design</a></li>
-                            <li><a href="#">#reviews</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-6">
+                <article class="post" id="article-6" data-tags="reviews code"  data-author="Marion_Berry">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -344,16 +340,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#reviews</a></li>
-                            <li><a href="#">#code</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-7">
+                <article class="post" id="article-7" data-tags="code news" data-author="George_Tuxedo">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -376,16 +370,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#code</a></li>
-                            <li><a href="#">#news</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-8">
+                <article class="post" id="article-8" data-tags="news design tutorials"  data-author="Kitty_Toebean">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -409,17 +401,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#news</a></li>
-                            <li><a href="#">#design</a></li>
-                            <li><a href="#">#tutorials</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-9">
+                <article class="post" id="article-9" data-tags="news tutorials" data-author="Marion_Berry">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -443,16 +432,14 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list ">
-                            <li><a href="#">#news</a></li>
-                            <li><a href="#">#tutorials</a></li>
                         </ul>
                     </div>
                 </article>
-                <article class="post" id="article-10">
+                <article class="post" id="article-10" data-tags="code design news reviews"  data-author="Marion_Berry">
                     <div>
                         <div class="post-author">
                             <span class="author-image"></span>
-                            <p>Marion Berry</p>
+                            <div class="post-author-wrapper"></div>
                             <span class="dot"></span>
                             <p>August 2, 2022</p>
                         </div>
@@ -480,10 +467,6 @@
                     <div class="post-tags">
                         <p><strong>Tags:</strong></p>
                         <ul class="tag-list">
-                            <li><a href="#">#code</a></li>
-                            <li><a href="#">#design</a></li>
-                            <li><a href="#">#news</a></li>
-                            <li><a href="#">#reviews</a></li>
                         </ul>
                     </div>
                 </article>
@@ -610,6 +593,16 @@
 
         </main>
         <aside>
+            <section class="tag-clouds card">
+                <h3 class="section-title">Tag Clouds</h3>
+                <ul class="tag-list">
+                    <li><a class="active" href="#tag-design">#design</a><span data-tag="design"></span></li>
+                    <li><a class="active" href="#tag-tutorials">#tutorials</a><span data-tag="tutorials"></span></li>
+                    <li><a href="#tag-code">#code</a><span data-tag="code"></span></li>
+                    <li><a href="#tag-news">#news</a><span data-tag="news"></span></li>
+                    <li><a href="#tag-reviews">#reviews</a><span data-tag="reviews"></span></li>
+                </ul>
+            </section>
             <section class="card">
                 <h2 class="section-title">Explore Topics</h2>
                 <ul class="list titles">
@@ -644,19 +637,6 @@
                         </li>
                     </ul>
                 </div>
-            </section>
-            <section class="tag-clouds card">
-                <h3 class="section-title">Tag Clouds</h3>
-                <ul class="tag-list">
-                    <li>#design</li>
-                    <li>#tutorials</li>
-                    <li>#news</li>
-                    <li>#code</li>
-                    <li>#reviews</li>
-                    <li>#inspiration</li>
-                    <li>#hobby</li>
-                    <li>#feelingGood</li>
-                </ul>
             </section>
         </aside>
     </div>
