@@ -177,10 +177,6 @@ h3:after, h2:after {
   }
 }
 
-section {
-  margin-top: 100px;
-}
-
 .section-title {
   color: $font-color-dark;
   position: relative;
@@ -980,13 +976,17 @@ footer {
   .wrapper main {
     width: 100%;
 
+    .titles-card ul{
+      min-height: auto;
+    }
+
     .tag-clouds {
       display: block;
     }
 
     .titles-card {
       display: block;
-      margin-bottom: 50px;
+      margin: 50px 0;
     }
   }
 }
