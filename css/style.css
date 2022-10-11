@@ -10934,10 +10934,10 @@ h3:after, .h3:after, h2:after, .h2:after {
   font-size: 50px;
 }
 
-.tag-clouds .section-title {
+.tags .section-title {
   margin-bottom: 40px;
 }
-.tag-clouds li {
+.tags li {
   padding: 5px 15px;
   border: 1px solid #ededed;
   border-radius: 20px;
@@ -10946,7 +10946,7 @@ h3:after, .h3:after, h2:after, .h2:after {
   margin-bottom: 15px;
   position: relative;
 }
-.tag-clouds li span {
+.tags li span {
   position: absolute;
   top: -10px;
   right: 0;
@@ -11335,7 +11335,7 @@ header .promo-posts .post-wrapper .item-post:last-child:after {
   background: linear-gradient(to top, #fe4f70 0%, #ffa387 100%);
   z-index: 1;
 }
-.wrapper main .tag-clouds {
+.wrapper main .tags {
   display: none;
 }
 .wrapper main .posts {
@@ -11486,7 +11486,7 @@ header .promo-posts .post-wrapper .item-post:last-child:after {
   height: 500px;
   text-align: center;
 }
-.wrapper aside .tag-clouds li {
+.wrapper aside .tags li {
   display: block;
 }
 .wrapper aside h2:after, .wrapper aside .h2:after, .wrapper aside h3:after, .wrapper aside .h3:after {
@@ -11625,7 +11625,7 @@ footer .wrapper a.btn p {
   .wrapper main .titles-card ul {
     min-height: auto;
   }
-  .wrapper main .tag-clouds {
+  .wrapper main .tags {
     display: block;
   }
   .wrapper main .titles-card {
