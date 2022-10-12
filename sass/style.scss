@@ -131,16 +131,37 @@ h3:after, h2:after {
   .section-title {
     margin-bottom: 40px;
   }
-   li {
-     padding: 5px 15px;
-     border: 1px solid #ededed;
-     border-radius: 20px;
-     display: inline-block;
-     margin-right: 15px;
-     margin-bottom: 15px;
-     position: relative;
 
-     span {
+  li {
+    padding: 5px 15px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    color: $font-color-dark;
+
+
+    .tag-size-1 {
+      font-size: 12px;
+    }
+
+    .tag-size-2 {
+      font-size: 14px;
+    }
+
+    .tag-size-3 {
+      font-size: 16px;
+    }
+
+    .tag-size-4 {
+      font-size: 18px;
+    }
+
+    .tag-size-5 {
+      font-size: 20px;
+    }
+
+    /* span {
        position: absolute;
        top:-10px;
        right: 0;
@@ -156,8 +177,8 @@ h3:after, h2:after {
        background: #fe4f70;
        background: linear-gradient(to top, #fe4f70 0%, #ffa387 100%);
        z-index: 1;
-     }
-   }
+     }*/
+  }
 }
 
 .post-text {
@@ -529,12 +550,11 @@ header {
               }
             }
           }
-
+/* WYKASOWAC */
           &:first-child .author-image {
             background-image: url(../images/a1.jpeg);
 
             &:after {
-              content: '2'
             }
           }
 
@@ -542,7 +562,6 @@ header {
             background-image: url(../images/a2.jpeg);
 
             &:after {
-              content: '7'
             }
           }
 
@@ -550,7 +569,6 @@ header {
             background-image: url(../images/i1.jpeg);
 
             &:after {
-              content: '6'
             }
           }
 
@@ -558,7 +576,6 @@ header {
             background-image: url(../images/a3.jpeg);
 
             &:after {
-              content: '12'
             }
           }
 
@@ -566,7 +583,7 @@ header {
             position: relative;
           }
 
-          .author-image:after {
+          .author-image span {
             content: '';
             color: #fff;
             display: block;
@@ -621,34 +638,43 @@ header {
         opacity: 1;
         z-index: 5;
       }
-      
+
       &:first-child .author-image {
         background-image: url(../images/a3.jpeg);
       }
+
       &:nth-child(2) .author-image {
         background-image: url(../images/a2.jpeg);
       }
+
       &:nth-child(3) .author-image {
         background-image: url(../images/a2.jpeg);
       }
+
       &:nth-child(4) .author-image {
         background-image: url(../images/a2.jpeg);
       }
+
       &:nth-child(5) .author-image {
         background-image: url(../images/i1.jpeg);
       }
+
       &:nth-child(6) .author-image {
         background-image: url(../images/a3.jpeg);
       }
+
       &:nth-child(7) .author-image {
         background-image: url(../images/i1.jpeg);
       }
+
       &:nth-child(8) .author-image {
         background-image: url(../images/a1.jpeg);
       }
+
       &:nth-child(9) .author-image {
-          background-image: url(../images/a3.jpeg);
+        background-image: url(../images/a3.jpeg);
       }
+
       &:nth-child(10) .author-image {
         background-image: url(../images/a3.jpeg);
       }
@@ -793,8 +819,6 @@ header {
     }
   }
 
-
-
   /* Aside panel*/
   aside {
     width: 30%;
@@ -802,7 +826,7 @@ header {
     text-align: center;
 
     .tags li {
-      display: block;
+      display: inline-block;
     }
 
     h2:after, h3:after {
@@ -976,7 +1000,7 @@ footer {
   .wrapper main {
     width: 100%;
 
-    .titles-card ul{
+    .titles-card ul {
       min-height: auto;
     }
 
