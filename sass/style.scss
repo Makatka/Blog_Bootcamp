@@ -471,7 +471,7 @@ header {
 
 
         &:first-child .post-image {
-          background-image: url(../images/i1.jpeg);
+          background-image: url(../images/Kitty_Toebean.jpeg);
         }
 
         &:nth-child(2) .post-image {
@@ -550,34 +550,6 @@ header {
               }
             }
           }
-/* WYKASOWAC */
-          &:first-child .author-image {
-            background-image: url(../images/a1.jpeg);
-
-            &:after {
-            }
-          }
-
-          &:nth-child(2) .author-image {
-            background-image: url(../images/a2.jpeg);
-
-            &:after {
-            }
-          }
-
-          &:nth-child(3) .author-image {
-            background-image: url(../images/i1.jpeg);
-
-            &:after {
-            }
-          }
-
-          &:nth-child(4) .author-image {
-            background-image: url(../images/a3.jpeg);
-
-            &:after {
-            }
-          }
 
           .author-image {
             position: relative;
@@ -637,46 +609,6 @@ header {
       &.active {
         opacity: 1;
         z-index: 5;
-      }
-
-      &:first-child .author-image {
-        background-image: url(../images/a3.jpeg);
-      }
-
-      &:nth-child(2) .author-image {
-        background-image: url(../images/a2.jpeg);
-      }
-
-      &:nth-child(3) .author-image {
-        background-image: url(../images/a2.jpeg);
-      }
-
-      &:nth-child(4) .author-image {
-        background-image: url(../images/a2.jpeg);
-      }
-
-      &:nth-child(5) .author-image {
-        background-image: url(../images/i1.jpeg);
-      }
-
-      &:nth-child(6) .author-image {
-        background-image: url(../images/a3.jpeg);
-      }
-
-      &:nth-child(7) .author-image {
-        background-image: url(../images/i1.jpeg);
-      }
-
-      &:nth-child(8) .author-image {
-        background-image: url(../images/a1.jpeg);
-      }
-
-      &:nth-child(9) .author-image {
-        background-image: url(../images/a3.jpeg);
-      }
-
-      &:nth-child(10) .author-image {
-        background-image: url(../images/a3.jpeg);
       }
 
       .post-author {
@@ -778,7 +710,7 @@ header {
             .card-inspiration {
 
               &:first-child .figure {
-                background-image: url(../images/i1.jpeg);
+                background-image: url(../images/Kitty_Toebean.jpeg);
               }
 
               &:nth-child(2) .figure {

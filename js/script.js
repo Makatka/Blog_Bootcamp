@@ -1,5 +1,16 @@
 'use strict';
 
+const templates = {
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
+  authorListLink: Handlebars.compile(document.querySelector('#template-authorList-link').innerHTML),
+  tagCloudLink: Handlebars.compile(document.querySelector('#template-tagCloud-link').innerHTML),
+};
+
+
+
+
 const opts = {
   tagSizes: {
     count: 5,
@@ -17,7 +28,7 @@ const select = {
   },
   article: {
     tags: '.tag-list',
-    author: '.post-author-wrapper a',
+    author: '.post-author',
     title: '.post-title',
   },
   listOf: {
@@ -62,9 +73,10 @@ function generateTitleLinks(customSelector = ''){
   for (let article of articles) {
     const articleId = article.getAttribute('id');
     const articleTitle = article.querySelector(select.article.title).textContent;
-    const linkHtml = `<li><i class="fa-solid fa-angle-right"></i><a href="#${articleId}"><span>${articleTitle}</span></a></li>`;
 
-    html += linkHtml;
+    const linkHTMLData = {id: articleId, title: articleTitle};
+    const linkHTML = templates.articleLink(linkHTMLData);
+    html += linkHTML;
   }
 
   for (let title of titles) {
@@ -107,11 +119,13 @@ function generateTags() {
 
   for (let article of articles) {
     const tagsWrapper = article.querySelector(select.article.tags);
-    let html = '';
     const tags = article.dataset.tags.split(' ');
+    let HTML = '';
 
     for (let tag of tags) {
-      html += `<li><a href="#tag-${tag}">#${tag}</a></li>`;
+      const linkHTMLData = {id: tag, title: tag};
+      const linkHTML = templates.tagLink(linkHTMLData);
+      HTML += linkHTML;
 
       if(!allTags.hasOwnProperty(tag)){
         allTags[tag] = 1;
@@ -119,19 +133,24 @@ function generateTags() {
         allTags[tag]++;
       }
     }
-    tagsWrapper.innerHTML = html;
+    tagsWrapper.innerHTML = HTML;
   }
-
   const tagLists = document.querySelectorAll(select.listOf.tags);
 
   for(let tagList of tagLists){
     const tagsParams = calculateTagsParams(allTags);
-    let allTagsHTML = '';
+    const allTagsData = {tags: []};
+
 
     for (let tag in allTags) {
-      allTagsHTML += `<li><a class="${calculateTagClass(allTags[tag],tagsParams)}" href="#tag-${tag}">#${tag}</a></li>`;
+
+      allTagsData.tags.push({
+        tag: tag,
+        count: allTags[tag],
+        className: calculateTagClass(allTags[tag], tagsParams)
+      });
     }
-    tagList.innerHTML = allTagsHTML;
+    tagList.innerHTML = templates.tagCloudLink(allTagsData);
   }
 }
 
@@ -162,33 +181,40 @@ function generateAuthor() {
   let allAuthors = {};
 
   for (let article of articles) {
-    const authorWrapper = article.querySelector('.post-author-wrapper');
-    const author = article.dataset.author.replace('_', ' ');
+    const authorWrapper = article.querySelector(select.article.author);
+    const author = article.dataset.author;
+    const authorName = author.replace('_', ' ');
+    const linkHTMLData = {id: author, title: authorName, image:`../images/${author}.jpeg`};
+
+    console.log(author);
 
     if(!allAuthors.hasOwnProperty(author)){
       allAuthors[author] = 1;
     } else {
       allAuthors[author]++;
     }
-    authorWrapper.innerHTML = `<a href="#author-${author.replace(' ', '_')}">${author}</a>`;
-  }
-  const authorList = document.querySelector('.author-list ul');
 
-  let allAuthorsHTML = '';
+    authorWrapper.innerHTML = templates.authorLink(linkHTMLData);
+  }
+
+  const authorList = document.querySelector(select.listOf.authors);
+
+  const allAuthorsData = {authors: []};
 
   for (let author in allAuthors) {
-    allAuthorsHTML += `<li>
-                            <div class="author-image">
-                                <span>${allAuthors[author]}</span>
-                            </div>
-                            <div class="author-info">
-                                <a href="#author-${author}" class="post-text">${author}</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            </div>
-                         </li>`;
+
+    allAuthorsData.authors.push({
+      author: author,
+      count: allAuthors[author],
+      authorName: author.replace('_', ' '),
+      image: `../images/${author}.jpeg`
+    });
+
   }
-  authorList.innerHTML = allAuthorsHTML;
+
+  authorList.innerHTML =templates.authorListLink(allAuthorsData);
 }
+
 
 function addClickListenersToAuthors() {
   const authorLinks = document.querySelectorAll('.post-author-wrapper a, .authors a');
